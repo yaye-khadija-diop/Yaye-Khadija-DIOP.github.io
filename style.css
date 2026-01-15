@@ -141,3 +141,8 @@ a {
     margin: 60px auto;
   }
 }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
