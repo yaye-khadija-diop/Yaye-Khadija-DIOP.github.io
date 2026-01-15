@@ -5,20 +5,31 @@
   <title>Yaye Khadija Diop | Data Science Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Hero -->
-  <header class="hero">
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <header class="hero" id="hero">
     <h1>Khadija Diop</h1>
-    <p class="subtitle">
-      Data Science & Business Analytics Student<br>
-      specialising in Data Engineering
-    </p>
+    <p class="subtitle">Data Science & Business Analytics Student<br>Specialising in Data Engineering</p>
     <a href="#projects" class="btn">View Projects</a>
   </header>
 
-  <!-- About -->
+  <!-- ===== About Section ===== -->
   <section class="section" id="about">
     <h2>About Me</h2>
     <p>
@@ -28,8 +39,8 @@
     </p>
   </section>
 
-  <!-- Skills -->
-  <section class="section skills">
+  <!-- ===== Skills Section ===== -->
+  <section class="section skills" id="skills">
     <h2>Skills</h2>
     <ul>
       <li>Python, SAS, SQL</li>
@@ -39,52 +50,37 @@
     </ul>
   </section>
 
-  <!-- Projects -->
+  <!-- ===== Projects Section ===== -->
   <section class="section" id="projects">
-  <h2>Projects</h2>
-  <div class="projects-grid">
-    
-    <div class="project-card">
-      <h3>Evaluating Machine Learning Models for Cyberattacks Detection Outcomes</h3>
-      <p>
-        Developed classification models to predict whether cyberattacks are detected or missed
-        by existing security mechanisms. Includes data cleaning, feature engineering,
-        and model evaluation.
-      </p>
-      <a href="#" class="project-link">View on GitHub</a>
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      
+      <div class="project-card">
+        <h3>Evaluating Machine Learning Models for Cyberattacks Detection Outcomes</h3>
+        <p>
+          Developed classification models to predict whether cyberattacks are detected or missed
+          by existing security mechanisms. Includes data cleaning, feature engineering,
+          and model evaluation.
+        </p>
+        <a href="#" class="project-link">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Customer Churn and Loyalty Analysis: Data Preparation and Feature Engineering</h3>
+        <p>
+          Conducted data preparation and feature engineering for predictive analytics
+          on customer churn and loyalty. Designed insights to guide business decisions.
+        </p>
+        <a href="#" class="project-link">View on GitHub</a>
+      </div>
+
     </div>
-
-    <div class="project-card">
-      <h3>Customer Churn and Loyalty Analysis: Data Preparation and Feature Engineering</h3>
-      <p>
-        Conducted data preparation and feature engineering for predictive analytics
-        on customer churn and loyalty. Designed insights to guide business decisions.
-      </p>
-      <a href="#" class="project-link">View on GitHub</a>
-    </div>
-
-  </div>
-</section>
-
   </section>
 
-  <!-- Contact -->
-  <section class="section contact">
+  <!-- ===== Contact Section ===== -->
+  <section class="section contact" id="contact">
     <h2>Contact</h2>
     <p>
       <a href="#">LinkedIn</a> ·
       <a href="#">GitHub</a> ·
-      <a href="mailto:your@email.com">Email</a>
-    </p>
-  </section>
-
-</body>
-</html>
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-.project-card:nth-child(1) { animation-delay: 0.1s; }
-.project-card:nth-child(2) { animation-delay: 0.3s; }
-.project-card:nth-child(3) { animation-delay: 0.5s; }
+      <a href="
