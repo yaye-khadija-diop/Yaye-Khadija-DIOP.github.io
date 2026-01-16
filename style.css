@@ -103,7 +103,7 @@ a {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 18px;        /* arrondi ; mettre 50% pour rond */
+  border-radius: 50px;        /* arrondi ; mettre 50% pour rond */
   border: 4px solid rgba(255,255,255,0.95);
   box-shadow: var(--shadow-md);
   display: block;
