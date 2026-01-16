@@ -5,61 +5,6 @@
   <title>Yaye Khadija Diop | Data Science Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral&display=swap" rel="stylesheet">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Hero layout: image on the left, text on the right */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 28px;
-      padding: 48px 16px;
-      box-sizing: border-box;
-      flex-wrap: wrap;
-      background: #e8f6f8; /* subtle background similar to current design */
-    }
-
-    .hero-text {
-      max-width: 720px;
-      text-align: left;
-    }
-
-    .hero-text h1 {
-      font-family: 'Spectral', serif;
-      margin: 0 0 8px 0;
-      font-size: 34px;
-    }
-
-    .hero-text p {
-      margin: 0 0 16px 0;
-      color: #3b3b3b;
-    }
-
-    .hero-buttons .btn { margin-right: 8px; }
-
-    .hero-image img {
-      width: 140px; /* reduced size as requested */
-      height: 140px;
-      object-fit: cover;
-      border-radius: 50%; /* circular photo */
-      border: 3px solid #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-      display: block;
-      flex-shrink: 0;
-    }
-
-    /* On small screens stack vertically and center */
-    @media (max-width: 720px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
-      .hero-text { text-align: center; }
-    }
-  </style>
 </head>
 <body>
 
@@ -168,6 +113,45 @@
       <a href="#">Email</a>
     </p>
   </section>
+
+  <!-- Footer + Theme toggle script -->
+  <footer class="footer">
+    <p>© 2026 Yaye Khadija Diop — 
+      <a href="#" aria-label="LinkedIn">LinkedIn</a> · 
+      <a href="#" aria-label="GitHub">GitHub</a> · 
+      <a href="mailto:yayekhadija0802@gmail.com" aria-label="Email">Email</a>
+    </p>
+    <button id="theme-toggle" aria-label="Basculer thème" style="margin-top:12px;padding:8px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);background:white;cursor:pointer;">
+      🌓 Thème
+    </button>
+  </footer>
+
+  <script>
+    // petit script pour basculer le thème (dark/light)
+    (function(){
+      const btn = document.getElementById('theme-toggle');
+      // récupère le thème sauvegardé si présent
+      const saved = localStorage.getItem('site-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+      btn.addEventListener('click', function(){
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        if(isDark){
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.removeItem('site-theme');
+        } else {
+          document.documentElement.setAttribute('data-theme','dark');
+          localStorage.setItem('site-theme','dark');
+        }
+      });
+
+      // navbar shrink on scroll (optionnel)
+      const nav = document.querySelector('.navbar');
+      window.addEventListener('scroll', function(){
+        if(window.scrollY > 20) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      });
+    })();
+  </script>
 
 </body>
 </html>
