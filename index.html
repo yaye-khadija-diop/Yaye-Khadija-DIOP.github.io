@@ -9,6 +9,56 @@
     html {
       scroll-behavior: smooth;
     }
+
+    /* Hero layout: image on the left, text on the right */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      padding: 48px 16px;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      background: #e8f6f8; /* subtle background similar to current design */
+    }
+
+    .hero-text {
+      max-width: 720px;
+      text-align: left;
+    }
+
+    .hero-text h1 {
+      font-family: 'Spectral', serif;
+      margin: 0 0 8px 0;
+      font-size: 34px;
+    }
+
+    .hero-text p {
+      margin: 0 0 16px 0;
+      color: #3b3b3b;
+    }
+
+    .hero-buttons .btn { margin-right: 8px; }
+
+    .hero-image img {
+      width: 140px; /* reduced size as requested */
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%; /* circular photo */
+      border: 3px solid #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      display: block;
+      flex-shrink: 0;
+    }
+
+    /* On small screens stack vertically and center */
+    @media (max-width: 720px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text { text-align: center; }
+    }
   </style>
 </head>
 <body>
@@ -24,6 +74,10 @@
 
   <!-- ===== Hero Section ===== -->
 <section id="hero" class="hero">
+  <div class="hero-image">
+    <img src="assets/WhatsApp Image 2026-01-16 at 21.31.10.jpeg" alt="Khadija Diop">
+  </div>
+
   <div class="hero-text">
     <h1>Hi, I'm <span class="highlight"> Yaye Khadija Diop</span> 👋</h1>
 
@@ -38,10 +92,6 @@
     </div>
   </div>
 
-  <div class="hero-image">
-    <img src="assets/profile.jpeg" alt="Khadija Diop">
-
-  </div>
 </section>
 
   <!-- ===== About Section ===== -->
@@ -67,7 +117,7 @@
 
   <!-- ===== Skills Section ===== -->
   <section class="section skills" id="skills">
-    <<h2>Skills</h2>
+    <h2>Skills</h2>
 <ul>
   <li>Python, R, SQL, AWS Cloud</li>
   <li>Machine Learning & Deep Learning (Regression, CNN, RNN, LSTM, GANs, Ensemble Models)</li>
@@ -115,4 +165,9 @@
     <p>
       <a href="#">LinkedIn</a> ·
       <a href="#">GitHub</a> ·
-      <a href="
+      <a href="#">Email</a>
+    </p>
+  </section>
+
+</body>
+</html>
