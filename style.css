@@ -94,8 +94,8 @@ body {
 
 /* Image profile */
 .hero-image img {
-  width: 220px;           /* un peu plus grande */
-  height: 220px;          /* même taille pour garder le rond parfait */
+  width: 300px;           /* un peu plus grande */
+  height: 300px;          /* même taille pour garder le rond parfait */
   object-fit: cover;
   border-radius: 50%;     /* rond parfait */
   border: 3px solid rgba(255,255,255,0.8);  /* bord léger pour contraste */
