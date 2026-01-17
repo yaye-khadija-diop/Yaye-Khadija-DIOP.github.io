@@ -20,29 +20,45 @@
   --shadow-sm: 0 6px 18px rgba(23,35,50,0.06);
   --shadow-md: 0 12px 30px rgba(23,35,50,0.08);
   --transition-fast: 0.22s;
+
+  /* ===== Couleurs background animé ===== */
+  --gradient1: #1f1c2c;
+  --gradient2: #928dab;
+  --gradient3: #00c6ff;
+  --gradient4: #ff7eb3;
 }
 
 /* ===== Global ===== */
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--bg-main);
+  background: linear-gradient(-45deg, var(--gradient1), var(--gradient2), var(--gradient3), var(--gradient4));
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
   color: var(--text-main);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding-top: 64px; /* pour navbar fixe */
+  position: relative;
+  overflow-x: hidden;
 }
 
-h1, h2, h3 {
-  font-family: 'Spectral', serif;
-  color: var(--text-main);
+/* ===== Gradient animation ===== */
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
-a {
-  color: var(--text-main);
-  text-decoration: none;
+/* ===== Particles derrière le contenu ===== */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* derrière tout */
 }
-
 /* ===== Navbar (glass) ===== */
 .navbar {
   position: fixed;
